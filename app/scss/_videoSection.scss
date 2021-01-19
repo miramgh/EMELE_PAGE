@@ -1,0 +1,51 @@
+.video{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color:$lightgray;
+    padding: 20px 30px;
+    @include breakpoint-down(small){
+        display: flex;
+        flex-direction: column-reverse;
+        padding:0px;
+    }
+    &__video{
+        background-image: url("../../assets/video.svg");
+        flex-grow:5;
+        background-size:cover;
+        background-position: center center;
+        height: 400px;
+        max-width:100%;
+        border-radius:15px;
+        object-fit: scale-down;
+        @include breakpoint-down(small){
+             background-image: url("../../assets/video.svg");
+            background-size: contain;
+            height: 200px;
+            max-width: 100%;
+            -o-object-fit: scale-down;
+            object-fit: scale-down;
+            width: 500px;
+            background-repeat: no-repeat
+        }
+    }
+    &__desc{
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size : 17px;
+            text-align:center;
+            color:black;
+            font-size :large;
+         }
+         h2{
+            font-size : 15px;
+            text-align:center;
+            color:black;
+         }
+    }
+
+}
+

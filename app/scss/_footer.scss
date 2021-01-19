@@ -1,0 +1,42 @@
+.footer{
+    display: flex;
+    background-color: $lightgray;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    @include breakpoint-down(small){
+        flex-direction: column;
+    }
+    div:not(:last-child){
+        border: 1px solid $lightgray;
+    }
+    &__logo{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 200px;
+        height:100px;
+        > img{
+            width: 200px;
+            height: 150px;
+            @include breakpoint-down(small){
+                width:150px;
+            }
+        }
+        
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+        @include breakpoint-down(small){
+            margin: 5px;
+        }
+    }
+    .fab{
+        padding-right:20px;
+    }
+    .active{
+        color:$babyblue;
+
+    }
+}

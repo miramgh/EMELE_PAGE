@@ -1,0 +1,72 @@
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:0 auto;
+    padding:  30px;
+    background-color: rgb(255, 255, 255);
+    @include breakpoint-down(small){
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    &__card{
+        background-color :$white;
+        padding :30px;
+        border-radius: 5px;
+        @include breakpoint-down(small){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+     
+    }
+    &__details{
+        @include breakpoint-down(small){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 17px;
+            color:rgb(34, 34, 34);
+        }
+         h2{
+            font-weight: lighter;
+            color:gray;
+            font-size: 15px;
+            @include breakpoint-down(small){
+                margin-top: 0px;
+            }
+
+        }
+    }
+    
+}
+.btn{
+    display:flex;
+    justify-content: space-between;
+    &__gray{
+        background-color: $lightgray;
+        color:black;
+        font-size: 1.1rem;
+        border-radius:15px;
+        border: none;
+        padding: 5px 50px;
+        margin: 5px;
+    }
+    &__primary{
+        background-color: $babyblue;
+        color:white;
+        font-size: 1.1rem;
+        border-radius:15px;
+        border: none;
+        padding: 5px 50px;
+        margin: 5px;
+
+    }
+    
+}
+

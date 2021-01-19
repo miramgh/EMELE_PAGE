@@ -1,0 +1,23 @@
+.img-container{
+    background-image: url("../../assets/img_container.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 780px;
+    max-width: 100%;
+    background-color: $lightgray;
+    
+    @include breakpoint-down(medium){
+        background-size: contain;
+        height: 500px;
+        background-position: top;
+        background-repeat: round;
+    }
+    @include breakpoint-down(small){
+        background-size: contain;
+        height:250px;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+   
+}
